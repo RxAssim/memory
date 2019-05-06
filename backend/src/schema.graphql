@@ -1,0 +1,19 @@
+type User {
+  id: ID!
+  name: String!
+  score: Int
+}
+
+type AuthenticatedUser {
+  user: User!
+  token: String!
+}
+
+type Query {
+  leaderboard: [User]
+}
+
+type Mutation {
+  createUser(name: String!): AuthenticatedUser!
+  saveScore(score: Int!): User
+}

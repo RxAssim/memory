@@ -1,0 +1,41 @@
+version: "3"
+services:
+  db:
+    image: postgres:11.2-alpine
+    environment:
+      POSTGRES_PASSWORD: memory
+      POSTGRES_USER: memory
+      POSTGRES_DB: memory
+    ports:
+      - "5432:5432"
+
+  server:
+    build:
+      context: ./backend
+      dockerfile: backend.Dockerfile
+    environment:
+      TYPEORM_CONNECTION: postgres
+      TYPEORM_HOST: db
+      TYPEORM_USERNAME: memory
+      TYPEORM_PASSWORD: memory
+      TYPEORM_DATABASE: memory
+      TYPEORM_PORT: 5432
+      TYPEORM_SYNCHRONIZE: "true"
+      TYPEORM_LOGGING: "true"
+      TYPEORM_ENTITIES: "src/entity/**/*.ts"
+    depends_on:
+      - db
+    command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; yarn start'
+    ports:
+      - "4000:4000"
+
+  client:
+    build:
+      context: ./frontend
+      dockerfile: frontend.Dockerfile
+    environment:
+      REACT_APP_GRAPHQL_ENDPOINT: http://server:4000
+    depends_on:
+      - server
+    ports:
+      - "80:80"

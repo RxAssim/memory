@@ -1,0 +1,14 @@
+
+<svg width="41px" height="40px" viewBox="0 0 41 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="In-game-Screen-(Single-Player)" transform="translate(-496.000000, -293.000000)" fill="#E64C3C" fill-rule="nonzero">
+            <g id="Group-4" transform="translate(490.000000, 166.000000)">
+                <g id="Group" transform="translate(6.000000, 127.000000)">
+                    <g id="hearts">
+                        <path d="M20.4625345,39.6328571 C31.5502069,31.5778571 37.0972241,24.21 39.7056724,18.59 C42.7531034,12.0235714 40.1022414,3.88357143 33.4531724,1.15214286 C25.6377241,-2.05714286 20.4625345,5.34714286 20.4625345,5.34714286 C20.4625345,5.34714286 15.3241034,-2.07642857 7.50936207,1.13428571 C0.860293103,3.86571429 -1.79056897,12.0057143 1.25686207,18.5721429 C3.86531034,24.1914286 9.37486207,31.5785714 20.4625345,39.6328571 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
